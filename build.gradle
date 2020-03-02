@@ -1,0 +1,49 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'com.renault'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+
+    // Servlet
+    compile "javax.servlet:javax.servlet-api:4.0.1"
+    // JDBC mysql
+    
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.19'
+    
+     // https://mvnrepository.com/artifact/org.glassfish/javax.json
+	compile group: 'org.glassfish', name: 'javax.json', version: '1.1.4'
+	
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.2.5.RELEASE'
+	
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+    
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.19'
+	
+	// https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api
+	compile group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.2.Final'
+	
+	// https://mvnrepository.com/artifact/org.hibernate/hibernate-core
+	compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.12.Final'
+	
+	
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+}
+
+test {
+	useJUnitPlatform()
+}
